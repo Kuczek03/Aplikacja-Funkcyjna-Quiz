@@ -1,0 +1,202 @@
+/* 1. Definicja Zmiennych (Design System) */
+:root {
+    --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    --card-bg: #222831;
+    --text-main: #eeeeee;
+    --text-muted: #00adb5;
+    --accent-color: #393e46;
+    --hover-color: #00adb5;
+    --success-color: #00b894;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --radius: 12px;
+}
+
+/* 2. Reset i Baza */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* 3. Główny Kontener */
+.wrapper {
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+}
+
+/* 4. Karty (Pytania i Wyniki) */
+.question-card, .result-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    
+    /* Animacja wejścia */
+    animation: fadeIn 0.5s ease-out;
+}
+
+h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+/* 5. Przyciski Opcji */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-option {
+    background: var(--accent-color);
+    color: var(--text-main);
+    border: 2px solid transparent;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efekt Hover (Najazd myszką) */
+.btn-option:hover {
+    background: #2c323c;
+    border-color: var(--hover-color);
+    transform: translateY(-3px); /* Lekkie uniesienie */
+    box-shadow: 0 5px 15px rgba(0, 173, 181, 0.3);
+}
+
+/* Efekt Active (Kliknięcie) */
+.btn-option:active {
+    transform: scale(0.98);
+}
+
+/* 6. Pasek Postępu (Mały tekst nad pytaniem) */
+#quiz-progress {
+    text-align: right;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 7. Karta Wyniku */
+.result-card {
+    text-align: center;
+    background: linear-gradient(145deg, #222831, #2d3436);
+    border-top: 5px solid var(--success-color);
+}
+
+.result-card h2 {
+    color: var(--success-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.result-card button {
+    margin-top: 2rem;
+    padding: 12px 30px;
+    background: var(--success-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.4);
+}
+
+.result-card button:hover {
+    transform: scale(1.05);
+    background: #00a383;
+}
+
+/* 8. Animacje */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 9. Responsywność (Mobile) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .question-card {
+        padding: 1.5rem;
+    }
+}
+
+/* style.css */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 173, 181, 0.1);
+}
+
+.input-dark {
+    width: 100%;
+    padding: 12px;
+    background: #1a1a2e;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+.menu-screen, .creator-screen {
+    animation: fadeIn 0.5s ease-out;
+}

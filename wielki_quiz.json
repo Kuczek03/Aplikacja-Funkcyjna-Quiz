@@ -1,0 +1,104 @@
+{
+  "id": 1715623456789,
+  "title": "Wielki Test Predyspozycji IT 💻",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Co sprawia Ci największą satysfakcję w projekcie?",
+      "options": [
+        { "text": "Gdy wszystko wygląda idealnie co do piksela", "score": 2 },
+        { "text": "Gdy algorytm działa super wydajnie i szybko", "score": 10 },
+        { "text": "Gdy udało się spiąć systemy i nic nie wybucha", "score": 5 },
+        { "text": "Gdy klient jest zadowolony, technologia nieważna", "score": 0 }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Jaki jest Twój stosunek do baz danych?",
+      "options": [
+        { "text": "Kocham SQL, relacje i normalizację danych", "score": 10 },
+        { "text": "Wolę proste JSON-y i NoSQL (MongoDB)", "score": 5 },
+        { "text": "Baza danych? Ja tylko pobieram z API", "score": 1 }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Gdy aplikacja zwraca błąd, co robisz?",
+      "options": [
+        { "text": "Otwieram DevTools w przeglądarce i badam CSS/JS", "score": 2 },
+        { "text": "Wchodzę na serwer i grepuję logi systemowe", "score": 10 },
+        { "text": "Restartuję kontener Dockera i modlę się", "score": 6 },
+        { "text": "Pytam kolegę z zespołu o co chodzi", "score": 0 }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Wybierz narzędzie, bez którego nie możesz żyć:",
+      "options": [
+        { "text": "Figma / Photoshop", "score": 1 },
+        { "text": "Terminal (Bash/Zsh)", "score": 10 },
+        { "text": "VS Code z milionem wtyczek", "score": 5 }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Jak wolisz pracować nad nową funkcją?",
+      "options": [
+        { "text": "Najpierw rysuję makietę interfejsu", "score": 2 },
+        { "text": "Najpierw projektuję strukturę danych i API", "score": 10 },
+        { "text": "Robię prototyp, żeby zobaczyć czy działa", "score": 5 }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Co sądzisz o centrowaniu elementu w CSS?",
+      "options": [
+        { "text": "To proste! Flexbox albo Grid i gotowe", "score": 1 },
+        { "text": "To mój największy koszmar", "score": 10 },
+        { "text": "Używam Bootstrapa/Tailwinda, samo się robi", "score": 4 }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "W wolnym czasie chętniej...",
+      "options": [
+        { "text": "Konfigurujesz domowy serwer na Raspberry Pi", "score": 10 },
+        { "text": "Oglądasz trendy w designie na Dribbble", "score": 1 },
+        { "text": "Grasz w gry i nie myślisz o kodzie", "score": 5 }
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Jaki system operacyjny jest najlepszy?",
+      "options": [
+        { "text": "Linux (Arch/Debian) - pełna kontrola", "score": 10 },
+        { "text": "macOS - ładny i ma terminal", "score": 5 },
+        { "text": "Windows - bo na nim działają gry", "score": 3 }
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Bezpieczeństwo w aplikacji to...",
+      "options": [
+        { "text": "Priorytet. Sanityzacja, tokeny, szyfrowanie", "score": 10 },
+        { "text": "Ważne, ale deadline ważniejszy", "score": 4 },
+        { "text": "Kto by chciał hakować moją stronę o kotach?", "score": 0 }
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Gdybyś miał budować dom, czym byś się zajął?",
+      "options": [
+        { "text": "Wylewaniem fundamentów i instalacją elektryczną", "score": 10 },
+        { "text": "Malowaniem ścian i doborem mebli", "score": 1 },
+        { "text": "Zarządzaniem ekipą budowlaną", "score": 5 }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "title": "Dziękujemy za rozwiązanie!",
+      "desc": "Im więcej punktów (blisko 100), tym bliżej Ci do Backend Developera / DevOpsa. Wyniki niskie (blisko 10-20) sugerują duszę Frontendowca / Designera. Środek stawki to Fullstack."
+    }
+  ]
+}
