@@ -1,11 +1,11 @@
 import { generateScoreBar } from './charts.js';
 
-const questionHTML = (q) => `
+const questionHTML = (question) => `
   <div class="question-card">
-    <h3>${q.text}</h3>
+    <h3>${question.text}</h3>
     <div class="options">
-      ${q.options.map(opt => `
-        <button class="btn-option" data-id="${q.id}" data-score="${opt.score}">
+      ${question.options.map(opt => `
+        <button class="btn-option" data-id="${question.id}" data-score="${opt.score}">
           ${opt.text}
         </button>
       `).join('')}
@@ -16,15 +16,11 @@ const questionHTML = (q) => `
 const resultHTML = (result, totalScore, maxPossibleScore) => `
   <div class="result-card">
     <h2 style="font-size: 2.5rem; margin-bottom: 10px;">${result.title}</h2>
-    
     ${generateScoreBar(totalScore, maxPossibleScore)}
-    
     <p style="font-size: 1.2rem; margin: 20px 0; color: #dfe6e9;">${result.desc}</p>
-    
     <div style="font-size: 0.9rem; color: #b2bec3;">
       Zdobyte punkty: ${totalScore} / ${maxPossibleScore}
     </div>
-
     <button onclick="location.reload()">Wróć do Menu</button>
   </div>
 `;
@@ -50,13 +46,16 @@ export const renderApp = (container, questions, appState, quizTitle) => {
     : '';
 
   container.innerHTML = `
-    <h1 style="text-align: center; margin-bottom: 20px;">${quizTitle}</h1>
+    <h1 style="text-align: center; margin-bottom: 10px;">${quizTitle}</h1>
     
-    <header class="quiz-header">
-      <div id="quiz-progress">Pytanie ${answeredCount + 1} z ${questions.length}</div>
-      ${backButtonHTML}
-    </header>
+    <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 15px;">
+        <div id="quiz-progress" style="margin:0;">Pytanie ${answeredCount + 1} / ${questions.length}</div>
+    </div>
     
     ${questionHTML(currentQuestion)}
+    
+    <div style="margin-top: 20px; text-align: right;">
+        ${backButtonHTML}
+    </div>
   `;
 };
