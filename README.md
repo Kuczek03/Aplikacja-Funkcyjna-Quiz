@@ -12,7 +12,6 @@ Projekt został zbudowany bez użycia frameworków (jak React czy Vue), aby zade
 
 ### 🎮 Rozgrywka
 - **Silnik Quizu:** Obsługa pytań wielokrotnego wyboru z różną wagą punktową.
-- **Licznik Czasu (Timer):** Presja czasu – masz 15 sekund na odpowiedź!
 - **Algorytm Tasowania:** Pytania są losowane przy każdym podejściu (Fisher-Yates Shuffle).
 - **Wizualizacja Wyników:** Generowane dynamicznie wykresy SVG i paski postępu.
 
@@ -58,25 +57,6 @@ Jeśli nie chcesz używać Dockera, potrzebujesz serwera lokalnego (przeglądark
 4. Wybierz "Open with Live Server".
 
 ---
-
-## 📂 Struktura Projektu (Clean Architecture)
-
-Projekt podzielony jest na warstwy, aby oddzielić logikę biznesową od widoku.
-
-src/
-├── core/       # Czysta logika biznesowa (niezależna od DOM)
-│   ├── scoring.js    # Obliczanie wyników, obsługa stanu
-│   └── builder.js    # Logika tworzenia quizu (draft)
-├── data/       # Dane statyczne
-│   └── questions.js  # Domyślny zestaw pytań
-├── ui/         # Warstwa prezentacji (Renderowanie HTML)
-│   ├── render.js     # Główny silnik widoku gry
-│   ├── screens.js    # Widoki Menu i Kreatora
-│   └── charts.js     # Generowanie wykresów SVG
-├── utils/      # Narzędzia pomocnicze
-│   ├── storage.js    # Obsługa localStorage i plików JSON
-│   └── fp.js         # Funkcje użytkowe (shuffle itp.)
-└── main.js     # Punkt wejścia, Router i Zarządzanie Stanem
 
 ## 🎮 Jak korzystać?
 
